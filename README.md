@@ -1,16 +1,14 @@
 # ts-express
 
-## Roteiro para criação desse projeto:
-
 Ambiente utilizado:
 node -v : v12.19.0 
 npm -v : 6.14.8
 
 ## Instruções de execução
 
-$ npm i
-$ npm run typeorm migration:run
-$ npm run dev
+1. $ npm i
+2. $ npm run typeorm migration:run
+3. $ npm run dev
 
 ## Testando a API
 ### POST
@@ -21,7 +19,7 @@ $ curl -i -X POST "http://localhost:3333/pessoas" \
 ### GET
 $ curl -s "http://localhost:3333/pessoas" |jq
 
-## Criação do projeto:
+## Roteiro para criação desse projeto
 1. mkdir ts-express
 2. npm i git-commit-msg-linter -D
 3. Adicionar o .gitignore com o seguinte conteúdo: node_modules/**/*
@@ -33,10 +31,10 @@ $ curl -s "http://localhost:3333/pessoas" |jq
 9. npm i ts-node-dev -D
 10. Criar o atributo "scripts" com o conteúdo "dev":"ts-node-dev src/server.ts" no arquivo package.json;
 
-## Para executar o projeto:
+## Para executar o projeto
 11. npm run dev
 
-## Para executar o projeto mais rápido:
+## Para executar o projeto mais rápido
 12. Adicionar "--transpile-only" no scripts dev em package.json (para não verifiar erros no código);
 13. Adicionar "--ignore-watch" node_modules no scripts dev em package.json (para não verificar o node_modules por alterações no código);
 14. Adicionar app.use(express.json()); no arquivo server.ts para que a aplicação consiga tratar requisições com body em json;
