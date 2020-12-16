@@ -21,6 +21,18 @@ export class criarPessoas1602786442280 implements MigrationInterface {
         {
           name: 'email',
           type: 'varchar'
+        },
+        {
+          name: 'instagram',
+          type: 'varchar'
+        },
+        {
+          name: 'facebook',
+          type: 'varchar'
+        },
+        {
+          name: 'linkedin',
+          type: 'varchar'
         }
       ]      
     }))

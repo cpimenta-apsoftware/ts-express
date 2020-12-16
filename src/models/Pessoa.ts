@@ -10,4 +10,13 @@ export default class Pessoa {
 
   @Column()
   email: string;  
+
+  @Column()
+  instagram: string;
+
+  @Column()
+  facebook: string;
+
+  @Column()
+  linkedin: string;
 }

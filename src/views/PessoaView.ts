@@ -5,7 +5,10 @@ export default {
     return {
       id: pessoa.id,
       nome: pessoa.nome,
-      email: pessoa.email      
+      email: pessoa.email,
+      instagram: pessoa.instagram,
+      facebook: pessoa.facebook,
+      linkedin: pessoa.linkedin           
     };
   },
 

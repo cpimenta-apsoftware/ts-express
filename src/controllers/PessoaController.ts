@@ -7,14 +7,20 @@ export default {
   async create(requisicao: Request, resposta: Response){    
     const {
       nome,
-      email
+      email,
+      instagram,
+      facebook,
+      linkedin
     } = requisicao.body;
   
     const pessoasRepository = getRepository(Pessoa);
 
     const data = {
       nome,
-      email
+      email,
+      instagram,
+      facebook,
+      linkedin
     };    
 
     const pessoa = pessoasRepository.create(data);
