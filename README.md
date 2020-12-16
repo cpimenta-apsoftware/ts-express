@@ -12,9 +12,7 @@ npm -v : 6.14.8
 
 ## Testando a API
 ### POST
-$ curl -i -X POST "http://localhost:3333/pessoas" \
--H "accept: */*" -H "Authorization: Abre-te Cézamo..."  \
--H "Content-Type: application/json" -d "{\"nome\":\"Caique Pimenta\",\"email\":\"cpimenta.apsoftware@gmail.com\",\"instagram\":\"https://www.instagram.com/cpimenta.apsoftware\",\"facebook\":\"https://www.facebook.com/caique.pimenta.733\",\"linkedin\":\"https://www.linkedin.com/in/caique-pimenta-350117117\"}"
+$ curl -i -X POST "http://localhost:3333/pessoas" -H "accept: */*" -H "Authorization: Abre-te Cézamo..." -H "Content-Type: application/json" -d "{\"nome\":\"Caique Pimenta\",\"email\":\"cpimenta.apsoftware@gmail.com\",\"instagram\":\"https://www.instagram.com/cpimenta.apsoftware\",\"facebook\":\"https://www.facebook.com/caique.pimenta.733\",\"linkedin\":\"https://www.linkedin.com/in/caique-pimenta-350117117\"}"
 
 ### GET
 $ curl -s "http://localhost:3333/pessoas" |jq
