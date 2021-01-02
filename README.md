@@ -67,3 +67,33 @@ curl -s "http://localhost:3333/pessoas" |jq
 
 ## Permitir que a API seja acessível pelos front-ends ou back-ends a partir de outros domínios (incluindo outras portas)
 29. npm i cors @types/cors -D
+
+## Usando Nodemon para atualizar o servidor a cada alteração
+```sh
+npm i -D nodemon
+```
+
+Criar um arquivo nodemon.json:
+```json
+{
+    "watch": ["src"],
+    "ext": ".ts",
+    "ignore": [],
+    "exec": "ts-node ./src/index.ts"
+}
+```
+
+## Usando Jest para testes
+```sh
+npm i -D jest @types/jest ts-jest
+npm i jest --global
+jest --init
+```
+```sh
+✔ Would you like to use Jest when running "test" script in "package.json"? … yes
+✔ Would you like to use Typescript for the configuration file? … yes
+✔ Choose the test environment that will be used for testing › node
+✔ Do you want Jest to add coverage reports? … no
+✔ Which provider should be used to instrument code for coverage? › babel
+✔ Automatically clear mock calls and instances between every test? … yes
+```
