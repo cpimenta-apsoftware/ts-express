@@ -97,3 +97,8 @@ jest --init
 ✔ Which provider should be used to instrument code for coverage? › babel
 ✔ Automatically clear mock calls and instances between every test? … yes
 ```
+
+## Usando Supertest para testar a comunicação com a API
+```sh
+npm i -D supertest @types/supertest
+```
