@@ -1,20 +1,21 @@
 // REQ / RES
-import express from 'express';
+import express, { Application } from 'express';
 import cors from 'cors';
 
 import 'express-async-errors';
 
-import './database/connection';
-
+//import { routes } from './routes';
 import routes from './routes';
 import errorHandler from './errors/handler';
 
-export const app = express();
+// Boot express
+export const app: Application = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.use(routes);
 app.use(errorHandler);
 
-app.listen(3333);
+// Application routing
+//routes(app);
+app.use(routes);

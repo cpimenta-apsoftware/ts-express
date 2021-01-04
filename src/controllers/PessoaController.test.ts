@@ -6,6 +6,6 @@ describe('Teste PessoaController', () => {
     const result = await request(app).get('/pessoas').send();
 
     expect(result.status).toBe(200);
-    //expect(result.body.data).toBe('Registros de pessoas');
+    expect(result.body.data).toBe('Registros de pessoas');
   });
 });

@@ -1,7 +1,20 @@
-import {Request, Response} from 'express';
+import {NextFunction, Request, Response, Router} from 'express';
 import { getRepository } from 'typeorm';
 import Pessoa from '../models/Pessoa';
 import PessoaView from '../views/PessoaView'
+
+// export const PessoaController: Router = Router();
+
+// PessoaController.get('/', async (requisicao: Request, resposta: Response, next: NextFunction) => {
+//   try {      
+//       // const pessoasRepository = getRepository(Pessoa);
+//       // const pessoas = await pessoasRepository.find();
+//       // resposta.status(200).send(PessoaView.renderMany(pessoas));
+//       resposta.status(200).send({data: 'Pong!'});      
+//   } catch (e) {
+//       next(e);
+//   }
+// });
 
 export default {
   async create(requisicao: Request, resposta: Response){    
@@ -31,9 +44,10 @@ export default {
   },
 
   async index(requisicao: Request, resposta: Response){
-     const pessoasRepository = getRepository(Pessoa);
-     const pessoas = await pessoasRepository.find();
-     return resposta.json(PessoaView.renderMany(pessoas));    
+    //  const pessoasRepository = getRepository(Pessoa);
+    //  const pessoas = await pessoasRepository.find();
+    //  return resposta.json(PessoaView.renderMany(pessoas));    
+    return resposta.status(200).json({data: 'Registros de pessoas'});
   },
 
   async show(requisicao: Request, resposta: Response){
