@@ -2,17 +2,24 @@ import { Application, Router } from 'express';
 
 //import { PessoaController } from './controllers/PessoaController';
 import PessoaController from './controllers/PessoaController';
-
-import { IndexController } from './controllers/IndexController';
+// import { IndexController } from './controllers/IndexController';
+import IndexController from './controllers/IndexController';
 // import { PingController } from './controllers/PingController';
 import PingController from './controllers/PingController';
 
+export const enum ApiRouteEnum{
+  Pessoa = '/pessoas',
+  Ping = '/ping',
+  Index = '/'
+}
+
 const routes = Router();
 
-routes.post('/pessoas', PessoaController.create);
-routes.get('/pessoas', PessoaController.index);
-routes.get('/pessoas/:id', PessoaController.show);
-routes.get('/ping', PingController.show);
+routes.post(ApiRouteEnum.Pessoa, PessoaController.create);
+routes.get(ApiRouteEnum.Pessoa, PessoaController.index);
+routes.get(ApiRouteEnum.Pessoa+'/:id', PessoaController.show);
+routes.get(ApiRouteEnum.Ping, PingController.show);
+routes.get(ApiRouteEnum.Index, IndexController.show);
 
 export default routes;
 
